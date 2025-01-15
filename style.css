@@ -64,14 +64,14 @@ header {
   align-items: center;
 }
 
-.socials .fab {
+header .socials .fab {
   padding: 0 0.5rem;
   font-size: 1.3rem;
   text-decoration: none;
   color: #fff;
 }
 
-.socials .fab:hover {
+header .socials .fab:hover {
   opacity: 0.7;
   transition: 0.1s;
 }
@@ -165,8 +165,8 @@ nav .links {
 }
 
 footer {
-  background-color: #228c22;
-  color: #fff;
+  background-color: #222222;
+  color: #d1d1d1;
   height: 8vh;
   display: flex;
   justify-content: center;
@@ -219,8 +219,8 @@ footer .author {
   justify-content: center;
   align-items: center;
   text-align: center;
-  backdrop-filter: blur(3px) saturate(180%);
-  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
   border-radius: 12px;
 }
 
@@ -257,8 +257,8 @@ footer .author {
   justify-content: center;
   align-items: stretch;
   gap: 2rem;
-  padding: 3rem 5rem;
-  background-color: #f7f7f7;
+  padding: 5rem;
+  background-color: #e2e2e2;
 }
 
 .membership-card {
@@ -267,7 +267,7 @@ footer .author {
   flex-direction: column;
   border-top: 0.5rem solid #228c22;
   border-radius: 12px;
-  background-color: #e2e2e2;
+  background-color: #f7f7f7;
   box-shadow: 0 0.25rem 0.5rem 0 #00000070;
 }
 
@@ -292,7 +292,7 @@ footer .author {
   gap: 0.75rem;
   padding: 2rem 0 1.5rem 0;
   margin-top: 1.5rem;
-  background-color: #228c2220;
+  background-color: #228c2250;
 }
 .offer p {
   color: #000;
@@ -319,7 +319,7 @@ span {
   content: "✔";
   font-size: 1.25rem;
   padding-right: 0.75rem;
-  color: #228c22;
+  color: #222222;
 }
 
 .benefits li {
@@ -348,7 +348,7 @@ span {
 
 .btn a:hover {
   color: #ffffff;
-  background-color: #228c22;
+  background-color: #ff4400;
   transition: 0.3s;
 }
 
@@ -391,15 +391,21 @@ span {
 }
 
 .about .socials .fab {
+  text-decoration: none;
+
   padding: 2rem 0.5rem 1.5rem 0.5rem;
   font-size: 1.5rem;
   font-weight: 900;
+  color: #222222;
+}
+
+.about .socials .fab:hover {
   color: #ff4400;
 }
 
 .contact {
   background-color: #f7f7f7;
-  padding: 2rem 1.5rem 3rem 1.5rem;
+  padding: 5rem 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -407,7 +413,7 @@ span {
 
 .location {
   width: 60%;
-  height: 90vh;
+  height: 80vh;
 }
 
 .location iframe {
@@ -423,21 +429,22 @@ span {
   height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem;
+  justify-content: space-around;
+  padding: 4rem 0 4rem 2rem;
 }
 
 .contact-container h3 {
-  background-color: #228c22;
-  color: #f7f7f7;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
+  color: #222222;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 .contact-box {
   display: flex;
-  text-align: center;
-  padding: 1rem 0 1rem 1rem;
+  padding: 1rem;
+  background-color: #e7e7e7;
+  border-radius: 4px;
 }
 
 .contact-box p {
@@ -447,22 +454,25 @@ span {
 
 .fa-map-pin {
   font-size: 1.5rem;
-  padding-right: 0.55rem;
-  color: #d4d4d4;
+  padding-right: 0.5rem;
+  color: #ff4400;
 }
 
 .fa-phone,
 .fa-envelope,
 .fa-clock {
   font-size: 1.5rem;
-
-  color: #d4d4d4;
+  color: #ff4400;
 }
 
 @media (max-width: 1180px) {
   .header {
     height: auto;
     width: 80%;
+  }
+
+  .about {
+    height: auto;
   }
 }
 
@@ -486,7 +496,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 3rem 2rem;
   }
 
   .membership-card {
@@ -494,7 +504,6 @@ span {
   }
 
   .about {
-    height: auto;
     flex-direction: column;
   }
 
@@ -509,35 +518,36 @@ span {
     padding: 1.5rem 0 1.5rem 0;
   }
 
+  .contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 1.5rem;
+  }
+
+  .contact-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .contact-container h3 {
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .contact-box {
+    width: 65%;
+  }
+
   .location {
-    width: 90%;
+    width: 100%;
     max-width: 960px;
   }
 
   .location iframe {
     height: 100%;
-  }
-
-  .contact {
-    width: 100%;
-    padding: 1.5rem 0.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contact-container {
-    width: 100%;
-    padding: 2rem 1rem;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-container h3 {
-    width: 100%;
-  }
-
-  .contact-box {
-    width: 100%;
   }
 }
 
@@ -590,13 +600,8 @@ span {
     z-index: 1;
   }
 
-  .gallery {
-    padding: 1.5rem 1rem;
-  }
-
-  .location,
-  .contact-container {
-    width: 90%;
+  .contact-box {
+    width: 85%;
   }
 }
 
@@ -604,5 +609,9 @@ span {
   .card {
     flex: 1 1 80%;
     max-width: 80%;
+  }
+
+  .contact-box {
+    width: 95%;
   }
 }
