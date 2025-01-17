@@ -25,10 +25,6 @@ h1 {
   text-transform: uppercase;
 }
 
-h2 {
-  display: none;
-}
-
 h3 {
   font-size: 1.6rem;
   padding: 0.5rem 0;
@@ -44,7 +40,7 @@ h3 {
   border: none;
   outline: none;
   color: #ffffff;
-  background-color: #ff4400;
+  background-color: #40aa40;
   border-radius: 50%;
   padding: 0.65rem 1rem;
   font-size: 1.5rem;
@@ -52,13 +48,12 @@ h3 {
 }
 
 #top-btn:hover {
-  background-color: #d1d1d1;
-  color: #000000;
+  background-color: #228c22;
 }
 
 header {
   height: 8vh;
-  background-color: #228c22;
+  background-color: #40aa40;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +63,7 @@ header .socials .fab {
   padding: 0 0.5rem;
   font-size: 1.3rem;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
 }
 
 header .socials .fab:hover {
@@ -116,6 +111,7 @@ header .socials .fab:hover {
   height: 60%;
   margin: 0 auto;
 }
+
 nav {
   padding: 1rem 0;
   background-color: #00000090;
@@ -131,7 +127,7 @@ nav .links {
   text-decoration: none;
   padding: 1rem 2rem;
   font-size: 1.4rem;
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
   text-shadow: 1px 1px #101010;
   border-radius: 2px;
@@ -139,7 +135,7 @@ nav .links {
 
 .link a:hover {
   border-radius: 2px;
-  background-color: #228c22;
+  background-color: #40aa40;
   transition: 0.3s;
 }
 
@@ -159,12 +155,12 @@ nav .links {
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 footer {
   background-color: #222222;
-  color: #d1d1d1;
+  color: #e7e7e7;
   height: 8vh;
   display: flex;
   justify-content: center;
@@ -219,6 +215,7 @@ footer .author {
   text-align: center;
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
+  background-color: #22222290;
   border-radius: 12px;
 }
 
@@ -263,7 +260,7 @@ footer .author {
   flex: 1;
   display: flex;
   flex-direction: column;
-  border-top: 0.5rem solid #228c22;
+  border-top: 0.5rem solid #40aa40;
   border-radius: 12px;
   background-color: #f7f7f7;
   box-shadow: 0 0.25rem 0.5rem 0 #00000070;
@@ -290,11 +287,13 @@ footer .author {
   gap: 0.75rem;
   padding: 2rem 0 1.5rem 0;
   margin-top: 1.5rem;
-  background-color: #228c2250;
+  background-color: #40aa4050;
 }
+
 .offer p {
-  color: #000;
+  color: #222222;
 }
+
 .price {
   font-size: 4rem;
   font-weight: 300;
@@ -345,13 +344,12 @@ span {
 }
 
 .btn a:hover {
-  color: #ffffff;
-  background-color: #ff4400;
+  background-color: #40aa40;
   transition: 0.3s;
 }
 
 .about {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,10 +360,14 @@ span {
 .about-heading {
   width: 50%;
   text-align: center;
+}
+
+.about-heading h2 {
+  color: #222222;
   font-size: 6rem;
   font-weight: 300;
   text-transform: uppercase;
-  text-decoration: underline double 3px #228c22;
+  text-decoration: underline double 3px #40aa40;
   text-underline-offset: 0.5rem;
 }
 
@@ -390,7 +392,6 @@ span {
 
 .about .socials .fab {
   text-decoration: none;
-
   padding: 2rem 0.5rem 1.5rem 0.5rem;
   font-size: 1.5rem;
   font-weight: 900;
@@ -398,12 +399,12 @@ span {
 }
 
 .about .socials .fab:hover {
-  color: #ff4400;
+  color: #228c22;
 }
 
 .contact {
   background-color: #f7f7f7;
-  padding: 5rem 2.5rem;
+  padding: 5rem 2.5rem 2.5rem 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,22 +454,17 @@ span {
 .fa-map-pin {
   font-size: 1.5rem;
   padding-right: 0.5rem;
-  color: #ff4400;
+  color: #40aa40;
 }
 
 .fa-phone,
 .fa-envelope,
 .fa-clock {
   font-size: 1.5rem;
-  color: #ff4400;
+  color: #40aa40;
 }
 
 @media (max-width: 1180px) {
-  .header {
-    height: auto;
-    width: 80%;
-  }
-
   .about {
     height: auto;
   }
@@ -498,7 +494,20 @@ span {
   }
 
   .membership-card {
+    flex: 1;
     max-width: 398px;
+  }
+
+  .membership-card h3 {
+    padding: 2rem 0 1rem 1rem;
+  }
+
+  .offer {
+    margin-top: 2rem;
+  }
+
+  .benefits {
+    padding: 1.5rem 0 4rem 2rem;
   }
 
   .about {
@@ -520,7 +529,7 @@ span {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2.5rem 1.5rem;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
   }
 
   .contact-container {
@@ -541,11 +550,7 @@ span {
 
   .location {
     width: 100%;
-    max-width: 960px;
-  }
-
-  .location iframe {
-    height: 100%;
+    height: 60vh;
   }
 }
 
@@ -581,20 +586,22 @@ span {
     top: 8vh;
     gap: 0;
     flex-direction: column;
-    background-color: #0c0f0a;
+    background-color: #222222;
     width: 100%;
     text-align: center;
     transition: 0.3s;
   }
 
   .link a {
-    padding: 2rem 0;
+    padding: 3rem 0;
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #e2e2e220;
+    text-transform: uppercase;
   }
 
   .link a:hover {
-    background-color: #800020;
+    background-color: #40aa40;
   }
 
   .links.active {
