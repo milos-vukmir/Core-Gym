@@ -1,635 +1,694 @@
 html {
-  scroll-behavior: smooth;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", serif;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-h1 {
-  font-size: 3.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: 1.6rem;
-  padding: 0.5rem 0;
-}
-
-#top-btn {
-  display: none;
-  position: fixed;
-  cursor: pointer;
-  bottom: 9%;
-  right: 3%;
-  z-index: 99;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  background-color: #40aa40;
-  border-radius: 50%;
-  padding: 0.65rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-#top-btn:hover {
-  background-color: #228c22;
-}
-
-header {
-  height: 8vh;
-  background-color: #40aa40;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header .socials .fab {
-  padding: 0 0.5rem;
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-header .socials .fab:hover {
-  opacity: 0.7;
-  transition: 0.1s;
-}
-
-.home::before {
-  content: "";
-  background: linear-gradient(to bottom, #00000070, #00000010),
-    url("home/samuel-girven-fqMu99l8sqo-unsplash.jpg") center / cover no-repeat;
-  background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.95;
-}
-
-.home {
-  height: 92vh;
-  background-attachment: fixed;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 5rem;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-}
-
-.logo {
-  flex: 1;
-}
-
-.logo img {
-  display: block;
-  width: 60%;
-  height: 60%;
-  margin: 0 auto;
-}
-
-nav {
-  padding: 1rem 0;
-  background-color: #00000090;
-  position: relative;
-}
-
-nav .links {
-  display: flex;
-  list-style-type: none;
-}
-
-.link a {
-  text-decoration: none;
-  padding: 1rem 2rem;
-  font-size: 1.4rem;
-  color: #ffffff;
-  font-weight: 500;
-  text-shadow: 1px 1px #101010;
-  border-radius: 2px;
-}
-
-.link a:hover {
-  border-radius: 2px;
-  background-color: #40aa40;
-  transition: 0.3s;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  top: -7%;
-  right: 3%;
-  z-index: 2;
-}
-
-.line {
-  display: block;
-  width: 1.5rem;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  background-color: #ffffff;
-}
-
-footer {
-  background-color: #222222;
-  color: #e7e7e7;
-  height: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer .author {
-  letter-spacing: 0.125rem;
-  font-size: 1.25rem;
-}
-
-.services {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.services::before {
-  content: "";
-  background: linear-gradient(to bottom, #00000090, #00000010),
-    url("services/samuel-girven-PUEbhF4Ycbs-unsplash.jpg") center / cover
-      no-repeat;
-  background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.95;
-}
-
-.cards {
-  width: 100%;
-  margin: auto;
-  padding: 1.25rem 2.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  position: relative;
-}
-
-.card {
-  flex: 1 1 calc(25% - 1rem);
-  max-width: calc(25% - 1rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  backdrop-filter: blur(5px) saturate(180%);
-  -webkit-backdrop-filter: blur(5px) saturate(180%);
-  background-color: #22222290;
-  border-radius: 12px;
-}
-
-.card img {
-  display: block;
-  width: 9rem;
-  height: 9rem;
-  object-fit: contain;
-}
-
-.card h3 {
-  width: 100%;
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 700;
-  padding: 1.5rem 0 1.5rem 0;
-  letter-spacing: 0.0625rem;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.card-desc p {
-  padding: 1.25rem 1rem 1.25rem 1rem;
-  color: #ffffff;
-}
-
-.card:hover {
-  box-shadow: 0 0.5rem 1rem 0 #10101070;
-  transition: 0.3s;
-}
-
-.membership {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 5rem;
-  background-color: #e2e2e2;
-}
-
-.membership-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border-top: 0.5rem solid #40aa40;
-  border-radius: 12px;
-  background-color: #f7f7f7;
-  box-shadow: 0 0.25rem 0.5rem 0 #00000070;
-}
-
-.membership-card h3 {
-  padding: 1.5rem 0 0.5rem 1rem;
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #222222;
-}
-
-.membership-card p {
-  padding: 0 1rem 0 1rem;
-  color: #222222;
-}
-
-.offer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 2rem 0 1.5rem 0;
-  margin-top: 1.5rem;
-  background-color: #40aa4050;
-}
-
-.offer p {
-  color: #222222;
-}
-
-.price {
-  font-size: 4rem;
-  font-weight: 300;
-  letter-spacing: 0.25rem;
-  align-self: center;
-}
-
-.price sup,
-span {
-  font-size: 2rem;
-  letter-spacing: 0.125rem;
-}
-
-.benefits {
-  padding: 1.5rem 0 2rem 2rem;
-  list-style-type: none;
-}
-
-.benefits li::before {
-  content: "✔";
-  font-size: 1.25rem;
-  padding-right: 0.75rem;
-  color: #222222;
-}
-
-.benefits li {
-  padding: 0.25rem 0.125rem;
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1.5rem;
-  margin-top: auto;
-}
-
-.btn a {
-  width: 90%;
-  padding: 1rem 0;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: #222222;
-  border-radius: 8px;
-}
-
-.btn a:hover {
-  background-color: #40aa40;
-  transition: 0.3s;
-}
-
-.about {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: #f7f7f7;
-}
-
-.about-heading {
-  width: 50%;
-  text-align: center;
-}
-
-.about-heading h2 {
-  color: #222222;
-  font-size: 6rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-decoration: underline double 3px #40aa40;
-  text-underline-offset: 0.5rem;
-}
-
-.about-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-  height: 100%;
-  width: 50%;
-}
-
-.about-text p {
-  width: 80%;
-  text-align: left;
-  line-height: 1.8;
-  background-color: #e2e2e2;
-  color: #222222;
-  padding: 1.25rem;
-  border-radius: 12px;
-}
-
-.about .socials .fab {
-  text-decoration: none;
-  padding: 2rem 0.5rem 1.5rem 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #222222;
-}
-
-.about .socials .fab:hover {
-  color: #228c22;
-}
-
-.contact {
-  background-color: #f7f7f7;
-  padding: 5rem 2.5rem 2.5rem 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.location {
-  width: 60%;
-  height: 80vh;
-}
-
-.location iframe {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0.25rem 0.5rem 0 #00000070;
-}
-
-.contact-container {
-  width: 35%;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 4rem 0 4rem 2rem;
-}
-
-.contact-container h3 {
-  color: #222222;
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  text-align: center;
-}
-
-.contact-box {
-  display: flex;
-  padding: 1rem;
-  background-color: #e7e7e7;
-  border-radius: 4px;
-}
-
-.contact-box p {
-  padding-left: 1rem;
-  color: #222222;
-}
-
-.fa-map-pin {
-  font-size: 1.5rem;
-  padding-right: 0.5rem;
-  color: #40aa40;
-}
-
-.fa-phone,
-.fa-envelope,
-.fa-clock {
-  font-size: 1.5rem;
-  color: #40aa40;
-}
-
-@media (max-width: 1180px) {
-  .about {
-    height: auto;
+    scroll-behavior: smooth;
   }
-}
-
-@media (max-width: 960px) {
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 3.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  h3 {
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+  }
+  
+  #top-btn {
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    bottom: 9%;
+    right: 3%;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background-color: #40aa40;
+    border-radius: 50%;
+    padding: 0.65rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  #top-btn:hover {
+    background-color: #228c22;
+  }
+  
+  header {
+    height: 8vh;
+    background-color: #40aa40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header .socials .fab {
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  header .socials .fab:hover {
+    opacity: 0.7;
+    transition: 0.1s;
+  }
+  
+  .home::before {
+    content: "";
+    background: linear-gradient(to bottom, #00000070, #00000010),
+      url("home/samuel-girven-fqMu99l8sqo-unsplash.jpg") center / cover no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.95;
+  }
+  
+  .home {
+    height: 92vh;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .logo {
+    flex: 1;
+  }
+  
+  .logo img {
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+  }
+  
+  nav {
+    padding: 1rem 0;
+    background-color: #00000090;
+    position: relative;
+  }
+  
+  nav .links {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .link a {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 1px 1px #101010;
+    border-radius: 2px;
+  }
+  
+  .link a:hover {
+    border-radius: 2px;
+    background-color: #40aa40;
+    transition: 0.3s;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: -7%;
+    right: 3%;
+    z-index: 2;
+  }
+  
+  .line {
+    display: block;
+    width: 1.5rem;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+  }
+  
+  footer {
+    background-color: #222222;
+    color: #e7e7e7;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer .author {
+    letter-spacing: 0.125rem;
+    font-size: 1.25rem;
+  }
+  
   .services {
-    padding: 3rem 0;
-    height: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .services::before {
+    content: "";
+    background: linear-gradient(to bottom, #00000090, #00000010),
+      url("services/samuel-girven-PUEbhF4Ycbs-unsplash.jpg") center / cover
+        no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.95;
   }
 
   .cards {
-    gap: 1.25rem;
-    padding: 0;
+    width: 100%;
+    margin: auto;
+    padding: 1.25rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
   }
-
+  
   .card {
-    flex: 1 1 calc(45% - 1.25rem);
-    max-width: calc(45% - 1.25rem);
-  }
+    flex: 1 1 calc(25% - 2rem);
+    max-width: calc(25% - 2rem);
+    min-height: 350px;
+    perspective: 1000px;
+    display: flex;
+    
 
-  .membership {
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    display: flex;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 2rem;
+    text-align: center;
+    padding: 2rem 0.5rem;
+    
   }
-
-  .membership-card {
-    flex: 1;
-    max-width: 398px;
+  
+  .card-front {
+    background-color: #22222299;
+    box-shadow: 0px 2px 6px #00000020;
+    color: #ffffff;
   }
-
-  .membership-card h3 {
-    padding: 2rem 0 1rem 1rem;
+  
+  .card-back {
+    justify-content: flex-start;
+    background-color: #228c2299; 
+    transform: rotateY(180deg);
+    color: #ffffff;
   }
-
-  .offer {
-    margin-top: 2rem;
-  }
-
-  .benefits {
-    padding: 1.5rem 0 4rem 2rem;
-  }
-
-  .about {
-    flex-direction: column;
-  }
-
-  .about-heading {
-    width: 100%;
-    font-size: 5rem;
-    padding: 1.5rem;
-  }
-  .about-text {
-    align-items: center;
-    width: 100%;
-    padding: 1.5rem 0 1.5rem 0;
-  }
-
-  .contact {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
-  }
-
-  .contact-container {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-  }
-
-  .contact-container h3 {
-    padding-top: 1rem;
-    width: 100%;
-  }
-
-  .contact-box {
-    width: 65%;
-  }
-
-  .location {
-    width: 100%;
-    height: 60vh;
-  }
-}
-
-@media (max-width: 768px) {
-  .home {
-    padding: 0;
-  }
-
+  
   .card img {
+    display: block;
     width: 9rem;
     height: 9rem;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0 0.5rem 2rem 0.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+  .card-desc p {
+    padding: 2rem 0.5rem 0 0.5rem;
+    color: #ffffff;
   }
 
-  .hamburger {
-    display: block;
+  .card-back p{
+    padding: 0 0.75rem 1rem 0.75rem;
   }
 
-  .hamburger.active .line:nth-child(2) {
-    opacity: 0;
+  
+  .membership {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 5rem 8rem;
+    background-color: #e2e2e2;
   }
-
-  .hamburger.active .line:nth-child(1) {
-    transform: translateY(0.5rem) rotate(45deg);
-  }
-
-  .hamburger.active .line:nth-child(3) {
-    transform: translateY(-0.5rem) rotate(-45deg);
-  }
-
-  .links {
-    position: fixed;
-    left: -100%;
-    top: 8vh;
-    gap: 0;
+  
+  .membership-card {
+    flex: 1;
+    display: flex;
     flex-direction: column;
-    background-color: #222222;
-    width: 100%;
+    border-top: 0.5rem solid #40aa40;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0.25rem 0.5rem 0 #00000070;
+  }
+  
+  .membership-card h3 {
+    padding: 1.75rem 0 0.5rem 1rem;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #222222;
+  }
+  
+  .membership-card p {
+    padding: 0 1rem 0 1rem;
+    color: #222222;
+  }
+  
+  .offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0 1.5rem 0;
+    margin-top: 1.75rem;
+    background-color: #40aa4050;
+  }
+  
+  .offer p {
+    color: #222222;
+  }
+  
+  .price {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.25rem;
+    align-self: center;
+  }
+  
+  .price-second {
+    font-size: 2rem;
+    letter-spacing: 0.125rem;
+  }
+
+  .currency{
+    font-size: 2.25rem;
+    padding-left: 0.25rem;
+    letter-spacing: 0;
+  }
+  
+  .benefits {
+    padding: 1.5rem 0 4rem 2rem;
+    list-style-type: none;
+  }
+  
+  .benefits li::before {
+    content: "✔";
+    font-size: 1.25rem;
+    padding-right: 0.75rem;
+    color: #222222;
+  }
+  
+  .benefits li {
+    padding: 0.25rem 0.125rem;
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    margin-top: auto;
+  }
+  
+  .btn a {
+    width: 90%;
+    padding: 1rem 0;
     text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #222222;
+    border-radius: 8px;
+  }
+  
+  .btn a:hover {
+    background-color: #40aa40;
     transition: 0.3s;
   }
-
-  .link a {
-    padding: 3rem 0;
-    display: block;
-    font-size: 1.25rem;
-    border-bottom: 2px solid #e2e2e220;
+  
+  .about {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f7f7f7;
+  }
+  
+  .about-heading {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .about-heading h2 {
+    color: #222222;
+    font-size: 6rem;
+    font-weight: 300;
     text-transform: uppercase;
+    text-decoration: underline double 3px #40aa40;
+    text-underline-offset: 0.5rem;
   }
-
-  .link a:hover {
-    background-color: #40aa40;
+  
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    height: 100%;
+    width: 50%;
   }
-
-  .links.active {
-    left: 0;
-    z-index: 1;
-  }
-
-  .contact-box {
-    width: 85%;
-  }
-
-  .logo img {
+  
+  .about-text p {
     width: 80%;
-    height: 80%;
+    text-align: left;
+    line-height: 1.8;
+    background-color: #e2e2e2;
+    color: #222222;
+    padding: 1.25rem;
+    border-radius: 12px;
   }
-}
-
-@media (max-width: 560px) {
-  .logo img {
-    width: 85%;
-    height: 85%;
+  
+  .about .socials .fab {
+    text-decoration: none;
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #222222;
   }
-  .card {
-    flex: 1 1 80%;
-    max-width: 80%;
+  
+  .about .socials .fab:hover {
+    color: #228c22;
   }
-
+  
+  .contact {
+    background-color: #f7f7f7;
+    padding: 3rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .location {
+    width: 60%;
+    height: 80vh;
+  }
+  
+  .location iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0.25rem 0.5rem 0 #00000070;
+  }
+  
+  .contact-container {
+    width: 35%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0 4rem 2rem;
+  }
+  
+  .contact-container h3 {
+    color: #222222;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+  }
+  
   .contact-box {
-    width: 95%;
+    display: flex;
+    padding: 1rem;
+    background-color: #e7e7e7;
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
   }
-}
+  
+  .contact-box p {
+    padding-left: 1rem;
+    color: #222222;
+  }
+  
+  .fa-map-pin {
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+    color: #40aa40;
+  }
+  
+  .fa-phone,
+  .fa-envelope,
+  .fa-clock {
+    font-size: 1.5rem;
+    color: #40aa40;
+  }
+  
+  @media (max-width: 1180px) {
+    .services {
+      padding: 3rem 0;
+      height: auto;
+    }
+    
+    
+    .card {
+      flex: 1 1 calc(50% - 2rem); 
+      max-width: calc(50% - 2rem);
+    }
+
+    .membership{
+      padding: 5rem 3rem;
+    }
+
+    .about {
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 960px) {
+   
+
+    .cards{
+      padding: 1.25rem 2.5rem;
+    }
+    
+    .membership {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 1rem;
+    }
+  
+    .membership-card {
+      flex: 1;
+      max-width: 400px;
+    }
+  
+    .membership-card h3 {
+      padding: 2rem 0 1rem 1rem;
+    }
+  
+    .offer {
+      margin-top: 2.5rem;
+    }
+  
+    .benefits {
+      padding: 1.5rem 0 5rem 2rem;
+    }
+  
+    .about {
+      flex-direction: column;
+    }
+  
+    .about-heading {
+      width: 100%;
+      font-size: 5rem;
+      padding-bottom: 1.5rem;
+      
+    }
+    .about-text {
+      align-items: center;
+      width: 100%;
+      padding: 1.5rem 0 1.5rem 0;
+    }
+  
+    .contact {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 1.5rem 0 1.5rem;
+    }
+  
+    .contact-container {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+     
+    }
+  
+    .contact-container h3 {
+      padding-top: 1rem;
+      width: 100%;
+    }
+  
+    .contact-box {
+      width: 65%;
+    }
+  
+    .location {
+      width: 100%;
+      height: 60vh;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home {
+      padding: 0;
+    }
+    
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .line:nth-child(1) {
+      transform: translateY(0.5rem) rotate(45deg);
+    }
+  
+    .hamburger.active .line:nth-child(3) {
+      transform: translateY(-0.5rem) rotate(-45deg);
+    }
+  
+    .links {
+      position: fixed;
+      left: -100%;
+      top: 8vh;
+      gap: 0;
+      flex-direction: column;
+      background-color: #222222;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+  
+    .link a {
+      padding: 3rem 0;
+      display: block;
+      font-size: 1.25rem;
+      border-bottom: 2px solid #e2e2e220;
+      text-transform: uppercase;
+    }
+  
+    .link a:hover {
+      background-color: #40aa40;
+    }
+  
+    .links.active {
+      left: 0;
+      z-index: 1;
+    }
+
+    .cards{
+      padding: 1.25rem 1.25rem;
+    }
+  
+    .contact-box {
+      width: 85%;
+    }
+  
+    .logo img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .logo img {
+      width: 85%;
+      height: 85%;
+    }
+    
+    .cards{
+      padding: 2rem 1.25rem;
+    }
+
+    .card {
+      flex: 1 1 95%; 
+      max-width: 95%;
+      
+    }
+  
+    .contact-box {
+      width: 95%;
+    }
+  }
+
+
+
